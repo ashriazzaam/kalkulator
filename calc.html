@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+</head>
+<body bgcolor="AFEEEE">
+<center> <!--untuk mengetengahkan tampilan kalkulator-->
+<br>
+	<h1>Kalkulator Javascript</h1>
+	<hr size=10 color="black">
+
+	<div style ="width:300px"; "background:FA8072">
+	<form name="formcalc">
+	<input name="display" placeholder="0" style="width:270px; height:60px; text-align:right; font-size:30; border-radius:8px; margin:3px"/>
+	<!--placeholder untuk tempat penginputan angka berbentuk kotak-->
+	<br>
+	<input type="button" value="7" onClick="document.formcalc.display.value +='7'" style="width:60px; height:60px; font-size:30; border-radius:8px; margin:3px"/>
+	<input type="button" value="8" onClick="document.formcalc.display.value +='8'" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="9" onClick="document.formcalc.display.value +='9'" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="+" onClick="btnplus()" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<br>
+	<input type="button" value="4" onClick="document.formcalc.display.value +='4'" style="width:60px; height:60px; font-size:30; border-radius:8px; margin:3px"/>
+	<input type="button" value="5" onClick="document.formcalc.display.value +='5'" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="6" onClick="document.formcalc.display.value +='6'" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="-" onClick="btnmin()" style="width:60px; height:60px; font-size:30; border-radius:8px; margin:3px"/>
+	<br>
+	<input type="button" value="1" onClick="document.formcalc.display.value +='1'" style="width:60px; height:60px; font-size:30; border-radius:8px; margin:3px"/>
+	<input type="button" value="2" onClick="document.formcalc.display.value +='2'" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="3" onClick="document.formcalc.display.value +='3'" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="*" onclick="btnmult()" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<br>
+	<input type="button" value="0" onClick="document.formcalc.display.value +='0'" style="width:60px; height:60px; font-size:30; border-radius:8px; margin:3px"/>
+	<input type="button" value="%" onClick="btnmod()" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="." onClick="btndot()" style="width:60px; height:60px; font-size:30; border-radius:8px;"/>
+	<input type="button" value="/" onClick="btndiv()" style="width:60px; height:60px; font-size:30; border-radius:8px; "/>
+	<br>
+	<input type="button" value="=" onClick="document.formcalc.display.value = eval(document.formcalc.display.value)" style="width:130px; height:60px; font-size:30; border-radius:8px; margin:3px"/>
+	<input type="button" value="C" onClick="btnclear()" style="width:130px; height:60px; font-size:30; border-radius:8px;"/>
+	
+	</form></div>
+	
+	<SCRIPT>
+	function btnplus(){
+		document.formcalc.display.value+="+";
+		document.formcalc.display.style.text-align="right";
+	}
+	function btnmin(){
+		document.formcalc.display.value= +="-";
+		document.formcalc.display.style.text-align="right";
+	}
+	function btnmult(){
+		document.formcalc.display.value= +="*";
+		document.formcalc.display.style.text-align="right";
+	}
+	function btnmod(){
+		document.formcalc.display.value= +="%";
+		document.formcalc.display.style.text-align="right";
+	}
+	function btndiv(){
+		document.formcalc.display.value= +="/";
+		document.formcalc.display.style.text-align="right";
+	}
+	function btndot(){
+		document.formcalc.display.value= +=".";
+		document.formcalc.display.style.text-align="right";
+	}	
+	function btnclear(){
+		document.formcalc.display.value= +="";
+		document.formcalc.display.style.text-align="right";
+	}
+	
+</SCRIPT>
+</center>	
+</body>
+</html>
